@@ -13,9 +13,6 @@ namespace InterviewReviewAPI.Controllers
     [ApiController]
     public class InterviewProcessesController : ControllerBase
     {
-
-        // https://learn.microsoft.com/en-gb/aspnet/core/tutorials/first-web-api?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0&tabs=visual-studio#routing-and-url-paths
-
         private readonly InterviewContext _context;
 
         public InterviewProcessesController(InterviewContext context)
