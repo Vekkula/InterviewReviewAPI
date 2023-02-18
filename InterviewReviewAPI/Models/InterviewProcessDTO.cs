@@ -16,5 +16,4 @@ public class InterviewProcessDTO
     public bool VideoInterview { get; set; }
     public bool JobOffered { get; set; }
     public bool OfferAccepted { get; set; }
-    public string? Secret { get; set; }
 }
