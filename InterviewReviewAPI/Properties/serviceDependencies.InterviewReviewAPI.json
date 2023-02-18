@@ -3,6 +3,13 @@
     "apis1": {
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/InterviewReviewAPIapi/apis/InterviewReviewAPI",
       "type": "apis.azure"
+    },
+    "mssql1": {
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/interviewreviewapidbserver/databases/InterviewReviewAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings",
+      "dynamicId": null
     }
   }
 }
