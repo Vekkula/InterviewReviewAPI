@@ -17,4 +17,6 @@ public class InterviewProcess
     public bool JobOffered { get; set; }
     public bool OfferAccepted { get; set; }
     public string? Secret { get; set; }
+
+    public bool Done { get; set; }
 }

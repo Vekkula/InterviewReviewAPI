@@ -13,9 +13,9 @@ namespace InterviewReviewAPI.Controllers
     [ApiController]
     public class InterviewProcessesController : ControllerBase
     {
-        private readonly InterviewContext _context;
+        private readonly InterviewDbContext _context;
 
-        public InterviewProcessesController(InterviewContext context)
+        public InterviewProcessesController(InterviewDbContext context)
         {
             _context = context;
         }
@@ -67,7 +67,22 @@ namespace InterviewReviewAPI.Controllers
             {
                 return NotFound();
             }
-            interviewProcess = InterviewProcessFromDTO(interviewProcessDTO);
+            // cant use InterviewProcessFromDTO() because it makes a new object
+            interviewProcess.Id = interviewProcessDTO.Id;
+            interviewProcess.companyName = interviewProcessDTO.companyName;
+            interviewProcess.JobName = interviewProcessDTO.JobName;
+            interviewProcess.Description = interviewProcessDTO.Description;
+            interviewProcess.WhereDiscovered = interviewProcessDTO.WhereDiscovered;
+            interviewProcess.Review = interviewProcessDTO.Review;
+            interviewProcess.IsComplete = interviewProcessDTO.IsComplete;
+            interviewProcess.ApplyDate = interviewProcessDTO.ApplyDate;
+            interviewProcess.FirstContact = interviewProcessDTO.FirstContact;
+            interviewProcess.EndDate = interviewProcessDTO.EndDate;
+            interviewProcess.InterviewCount = interviewProcessDTO.InterviewCount;
+            interviewProcess.OnlineAssesment = interviewProcessDTO.OnlineAssesment;
+            interviewProcess.VideoInterview = interviewProcessDTO.VideoInterview;
+            interviewProcess.JobOffered = interviewProcessDTO.JobOffered;
+            interviewProcess.OfferAccepted = interviewProcessDTO.OfferAccepted;
 
             try
             {

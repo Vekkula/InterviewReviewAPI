@@ -2,9 +2,9 @@
 
 namespace InterviewReviewAPI.Models;
 
-public class InterviewContext : DbContext
+public class InterviewDbContext : DbContext
 {
-    public InterviewContext(DbContextOptions<InterviewContext> options) : base(options)
+    public InterviewDbContext(DbContextOptions<InterviewDbContext> options) : base(options)
     {
 
     }
