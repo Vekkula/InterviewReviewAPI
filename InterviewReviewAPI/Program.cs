@@ -33,7 +33,7 @@ var app = builder.Build();
 
 // Configure the HTTP request pipeline. For this website it's okay to use SwaggerUI in production
 app.UseSwagger();
-app.UseSwaggerUI();
+app.UseSwaggerUI(); 
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
